@@ -6,6 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+.share {
+  display: inline-block;
+}
 .all {
   display: flex;
 }
@@ -63,7 +66,7 @@ label {
   height: 100vh;
 }
 .who {
-  height: 22px;
+  height: 19px;
   /* padding: 10px 0px; */
 }
 .App-header {

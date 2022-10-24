@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import Nav from "./Nav";
 import { isDisabled } from "@testing-library/user-event/dist/utils";
 import { useNavigate } from "react-router-dom";
-
+import orin from "../assest/images/song.mp3"
 const Dashboard = () => {
     const Navigate = useNavigate()
     const [setQuestion, setsetQuestion] = useState("")
@@ -16,10 +16,6 @@ const Dashboard = () => {
     const [correctC, setCorrectC] = useState("")
     const [tappedIndex, settappedIndex] = useState()
     const [score, setscore] = useState(0)
-    // const [count, setcount] = useState(0)
-    // const [color, setcolor] = useState("")
-    // let dashname = JSON.parse(localStorage.getItem("game"))
-    // console.log(dashname);
     const toggleMenu = () => {
         let navigation = document.querySelector(".navigation");
         let container = document.querySelector(".container");
@@ -31,15 +27,17 @@ const Dashboard = () => {
     };
 
     let display = JSON.parse(localStorage.getItem("questions"))
+    const audio = new Audio(orin)
+    const touch = () => {
+        audio.play()
+    }
+    const okay = () => {
+        audio.pause()
+    }
     useEffect(() => {
-        // console.log(display);
         let randQuestion = Math.floor(Math.random() * display.length)
         setsetQuestion(display)
         setrandom(() => display[randQuestion])
-
-        // console.log(randQuestion);
-        // console.log(display[randQuestion]);
-
         let correctAnswer = display[randQuestion].correct
         console.log(correctAnswer)
         setAnswer(correctAnswer)
@@ -112,6 +110,8 @@ const Dashboard = () => {
                         <div className="row justify-content-center">
                             <div className="col-md-12 text-center sep">
                                 <p className="text-white h5 fw-bold">YOUR TOTAL SCORE IS :{score}</p>
+                                <button type='submit' className="btn btn-primary" onClick={touch}>PlayMusic</button>
+                                <button type='submit' className="btn btn-danger" onClick={okay}>PauseMusic</button>
                                 <img src={friend} className='img-responsive img-fluid' style={{ width: "100px" }} />
                             </div>
                         </div>

@@ -5,11 +5,13 @@ import * as yup from "yup"
 import { useEffect } from 'react'
 import picture from "../assest/images/wba.png"
 import { Navigate, useNavigate } from 'react-router-dom'
+import { useId } from 'react'
 
 const FormikForm = () => {
+    const id = useId()
+    const [wba, setwba] = useState([])
     const Navigate = useNavigate()
     // let special = "" 
-    const [wba, setwba] = useState([])
     // special = JSON.parse(localStorage.getItem("game"))
     const [Error, setError] = useState("")
     useEffect(() => {
@@ -38,15 +40,16 @@ const FormikForm = () => {
             if (values) {
                 if (wba.length <= 0) {
                     setwba(wba.push(values));
+                    console.log(wba);
                     localStorage.setItem("game", JSON.stringify(wba));
                 } else {
                     for (const a of wba) {
                         let user = values;
                         if (a["email"] !== user.email) {
-                            setwba(wba.push(values));
-                            console.log(wba);
-                            Navigate('/Signin')
+                            setwba(wba, values);
                             localStorage.setItem("game", JSON.stringify(wba));
+                            Navigate('/Signin')
+                            console.log(wba);
                         } else if (a["email"] === user.email) {
                             let err = 'email  already in use'
                             setError(err)
@@ -122,11 +125,15 @@ const FormikForm = () => {
                                     <div className='text-danger who'>{formik.errors.email}</div>
                                     <label htmlFor="time" className='d-flex'>Password</label>
                                     <input type="text" maxLength={10} className={formik.errors.password ? 'form-control  is-invalid mx-3' : "form-control  is-valid"} onBlur={formik.handleBlur} onChange={formik.handleChange} ref={password} placeholder='password' name='password' />
+                                    <div className='text-danger who'>{formik.errors.password}</div>
                                     <span id='toggle' href={toggle} onClick={showHide} className='translated float-end me-4'>
                                         <i href={1} className="fa fa-eye text-dark" arial-hidden="true"></i>
                                     </span>
-                                    <div className='text-danger who'>{formik.errors.password}</div>
-                                    <button type='submit' className='btn mt-3 btn-primary btn-lg px-5 fst-italic'>Register</button>
+                                    <div className='share'>
+                                        <input id={id} type="checkbox" className='mx-3' name='react' />
+                                        <label htmlFor={id} className='mx-2'>CLICK HERE</label>
+                                        <button type='submit' className='btn mt-3 btn-primary btn-md px-5 fst-italic'>Register</button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -135,7 +142,6 @@ const FormikForm = () => {
                         </div>
                     </div>
                 </div>
-
             </section>
         </>
     )
