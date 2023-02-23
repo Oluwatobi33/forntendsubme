@@ -4,15 +4,15 @@ import { useRef } from 'react'
 import * as yup from "yup"
 import { useEffect } from 'react'
 import picture from "../assest/images/wba.png"
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useId } from 'react'
-
+import PasswordStrenght from './PasswordStrenght'
 const FormikForm = () => {
+    const [change, setchange] = useState('')
     const id = useId()
     const [wba, setwba] = useState([])
     const Navigate = useNavigate()
-    // let special = "" 
-    // special = JSON.parse(localStorage.getItem("game"))
+
     const [Error, setError] = useState("")
     useEffect(() => {
         if (localStorage.game) {
@@ -31,6 +31,7 @@ const FormikForm = () => {
             password: ""
         },
         onSubmit: (values) => {
+
             // setwba(wba.push(values));
             // console.log(wba);
             // localStorage.setItem("game", JSON.stringify(wba))
@@ -89,7 +90,6 @@ const FormikForm = () => {
         })
     })
     // console.log(formik.errors);
-
     const toggle = useRef()
     const i = useRef()
     const password = useRef()
@@ -117,18 +117,26 @@ const FormikForm = () => {
                                     <label htmlFor="Name" className='d-flex'>Firstname</label>
                                     <input type="text" className={formik.errors.firstname ? 'form-control  is-invalid' : "form-control  is-valid"} placeholder='Firstname' onChange={formik.handleChange} name='firstname' onBlur={formik.handleBlur} />
                                     <div className='text-danger who'>{formik.errors.firstname}</div>
+
                                     <label htmlFor="Name" className='d-flex'>lastname</label>
                                     <input type="text" className={formik.errors.lastname ? 'form-control  is-invalid' : "form-control  is-valid"} onBlur={formik.handleBlur} placeholder='lastname' onChange={formik.handleChange} name='lastname' />
                                     <div className='text-danger who'>{formik.errors.lastname}</div>
+
                                     <label htmlFor="Name" className='d-flex'>Email</label>
                                     <input type='text' className={formik.errors.email ? 'form-control  is-invalid' : "form-control  is-valid"} onBlur={formik.handleBlur} onChange={formik.handleChange} placeholder='email' name='email' />
                                     <div className='text-danger who'>{formik.errors.email}</div>
+
                                     <label htmlFor="time" className='d-flex'>Password</label>
-                                    <input type="text" maxLength={10} className={formik.errors.password ? 'form-control  is-invalid mx-3' : "form-control  is-valid"} onBlur={formik.handleBlur} onChange={formik.handleChange} ref={password} placeholder='password' name='password' />
+                                    <input type="password" className={formik.errors.password ? 'form-control  is-invalid mx-3' : "form-control  is-valid"} onBlur={formik.handleBlur} ref={password} onChange={formik.handleChange} placeholder='password' name='password' />
+
                                     <div className='text-danger who'>{formik.errors.password}</div>
+
                                     <span id='toggle' href={toggle} onClick={showHide} className='translated float-end me-4'>
                                         <i href={1} className="fa fa-eye text-dark" arial-hidden="true"></i>
                                     </span>
+
+                                    {/* <PasswordStrenght change={change} /> */}
+
                                     <div className='share'>
                                         <input id={id} type="checkbox" className='mx-3' name='react' />
                                         <label htmlFor={id} className='mx-2'>CLICK HERE</label>
@@ -138,7 +146,7 @@ const FormikForm = () => {
                             </div>
                         </div>
                         <div className="col-lg-5 col-md-5 mt-3">
-                            <img src={picture} alt='who wants to be a millionaire' className='img-responsive img-fluid w-90' />
+                            <img src={picture} alt='who wants to be a millionaire' className='img-responsive img-fluid' />
                         </div>
                     </div>
                 </div>

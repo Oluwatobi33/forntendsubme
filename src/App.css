@@ -86,7 +86,8 @@ label {
 .translated {
   /* transform: translateX(25vw); */
   position: relative;
-  bottom: 33px;
+  bottom: 47px;
+  right: 12px;
 }
 @keyframes App-logo-spin {
   from {
