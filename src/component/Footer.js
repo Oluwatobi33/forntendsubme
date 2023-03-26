@@ -1,9 +1,8 @@
 import React from 'react'
-// import { BsTwitter } from "react-icons/bs";
-// import { BsFacebook } from "react-icons/bs";
-// import { BsInstagram } from "react-icons/bs";
-// import { BsSkype } from "react-icons/bs";
-// import { BsLinkedin } from "react-icons/bs";
+import { FaFacebook } from 'react-icons/fa'
+import { FaTwitter } from 'react-icons/fa'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
 const Footer = () => {
     return (
         <>
@@ -66,14 +65,14 @@ const Footer = () => {
                     <div className="col-lg-3 col-md-6">
                         <h4 className='ms-4'>Our Social Networks</h4>
                         <p className='ms-4'>You can follow us on any of our social media platforms for updates and information.</p>
-                        <div className="social-links mt-3">
-                            <a href="#" className='twitter'>
-                                {/* <i>{BsTwitter}</i> */}
-                            </a>
-                            <a href="#" className='twitter'>
-                                {/* <i>{BsTwitter}</i> */}
-                            </a>
-                        </div>
+                        {/* <div className="social-links mt-3 "> */}
+                        <ul style={{ listStyleType: "none", display: "flex" }} className=' icon'>
+                            <li><a href='https://twitter.com/InterswitchGRP'><FaInstagram /></a></li>
+                            <li><a href='https://www.facebook.com/InterswitchGroup'><FaTwitter /></a></li>
+                            <li><a href='https://www.instagram.com/interswitchgroup/?hl=en'> <FaFacebook /> </a></li>
+                            <li><a href='https://www.youtube.com/user/Interswitch'><FaLinkedinIn /></a></li>
+                        </ul>
+                        {/* </div> */}
                     </div>
                 </div>
             </div>

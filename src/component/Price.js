@@ -38,7 +38,7 @@ const Price = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 aos-init aos-animate" data-aos data-aos-delay="100">
+                    <div className="col-lg-4 col-md-6 aos-init aos-animate my-3" data-aos data-aos-delay="100">
                         <div className='background1'>
                             <h2 className=" mtn1">Mtn SME Data</h2>
                             <table className='table table-all '>

@@ -9,6 +9,7 @@ import Happy from './Happy'
 import Contact from './Contact'
 import New from './New'
 import Footer from './Footer'
+// import Register from './Register'
 const Home = () => {
 
     return (
@@ -22,6 +23,7 @@ const Home = () => {
             <Contact />
             <New />
             <Footer />
+            {/* <Register /> */}
         </>
     )
 }

@@ -15,10 +15,11 @@ const SubmeBann = () => {
                 </div>
                 <div className="container mt-4">
                     <div className="row justify-content-center">
-                        <div className=" col-md-6 mx-5">
-                            <div className=" col-md-10 my-4 text-center ">
-                                <a className=" mx-5 text-uppercase  text-decoration-none  text-white started ">get started +</a>
-                                <a className=" text-uppercase text-white started ">Login</a>
+                        <div className=" col-md-6 mx-4">
+                            <div className=" col-md-10 my-4 text-center  nice">
+                                <a className=" mx-5 text-uppercase  text-decoration-none  text-white started " >get started + &nbsp; &nbsp;
+                                </a>
+                                <a className=" text-uppercase text-white start ">Login</a>
                             </div>
                         </div>
                     </div>
@@ -27,5 +28,4 @@ const SubmeBann = () => {
         </>
     )
 }
-
 export default SubmeBann

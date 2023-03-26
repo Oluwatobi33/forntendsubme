@@ -13,10 +13,12 @@ const Nav = () => {
                     </div>
                 </div>
             </section>
-            <nav className="navbar navbar-expand-md navbar-light" style={{
+            <nav className="navbar ml-auto navbar-expand-md fixed-top" style={{
                 boxShadow: "0px 2px 15px rgba(0, 0, 0, 0.1)", background: "#fff", transition: "all 0.5s"
             }}>
-                <a className="navbar-brand" href="#">subme<span style={{ color: "#106eea" }}>.com.ng</span></a>
+                <p className='brand'>
+                    <a className="navbar-brand" href="#">subme<span style={{ color: "#106eea" }}>.com.ng</span></a>
+                </p>
                 <button className="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
                     <span className="navbar-toggler-icon bg-white text-dark"></span>
                 </button>
