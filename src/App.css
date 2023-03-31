@@ -391,7 +391,9 @@ label {
   font-size: 18px;
   display: inline-block;
   padding: 0px 10px;
-  /* float: inline-start; */
+  /* float: inline-start;<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>navba */
 }
 .icon li a {
   /* font-size: 18px; */
@@ -456,7 +458,7 @@ label {
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   text-align: center;
-  margin-left: 20vw;
+  margin-left: 13vw;
   padding: 0px 10px;
 }
 
@@ -543,6 +545,14 @@ label {
   font-family: sans-serif, "poppins";
 }
 @media (max-width: 480px) {
+  .middle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 75%;
+  }
   ul li {
     text-align: justify;
     font-family: "Open Sans", sans-serif;
