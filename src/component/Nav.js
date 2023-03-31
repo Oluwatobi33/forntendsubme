@@ -13,8 +13,8 @@ const Nav = () => {
                     </div>
                 </div>
             </section>
-            <nav className="navbar ml-auto navbar-expand-md fixed-top" style={{
-                boxShadow: "0px 2px 15px rgba(0, 0, 0, 0.1)", background: "#fff", transition: "all 0.5s"
+            <nav className="navbar ml-auto navbar-expand-md fixed-top " style={{
+                boxShadow: "0px 2px 15px rgba(0, 0, 0, 0.1)", backgroundColor: "#ffff", transition: "all 0.5s"
             }}>
                 <p className='brand'>
                     <a className="navbar-brand" href="#">subme<span style={{ color: "#106eea" }}>.com.ng</span></a>
@@ -33,6 +33,15 @@ const Nav = () => {
                         <li className="nav-item px-3">
                             <Link to="/" className="nav-link text-dark">Pricing</Link>
                         </li>
+                        {/* <li className="nav-item px-3 dropdown">
+                            <a className="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Company</a>
+                            <ul className="dropdown-menu">
+                                <li><a className="dropdown-item py-2 px-4" href="#">About Us</a></li>
+                                <li><a className="dropdown-item py-2 px-4" href="#">Blog</a></li>
+                                <li><a className="dropdown-item py-2 px-4" href="#">Contact Us</a></li>
+                                <li><a className="dropdown-item py-2 px-4" href="#">Press & Media</a></li>
+                            </ul>
+                        </li> */}
                         <li className="nav-item px-3 dropdown">
                             <a className="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Product</a>
                             <ul className="dropdown-menu">
@@ -109,6 +118,7 @@ const Nav = () => {
                     </div>
                 </div>
             </nav> */}
+
         </>
     )
 }

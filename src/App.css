@@ -25,7 +25,7 @@
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  padding: 200px 0px;
+  padding: 270px 0px;
   background-size: cover;
   opacity: 1;
   background-attachment: fixed;
@@ -38,6 +38,7 @@
   transition: all 0.5s;
   color: #fff;
 }
+
 .test h2 {
   font-size: 19px;
   letter-spacing: 1px;
@@ -53,7 +54,7 @@
 }
 .test h3 span {
   color: #106eea;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 800;
   font-family: "Roboto", sans-serif;
 }
@@ -169,23 +170,24 @@ a {
   font-weight: 700;
 }
 .car h3 {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
   margin: 10px 0 5px 0;
   color: #fff;
   text-align: center;
 }
 .car h4 {
-  font-size: 14px;
+  font-size: 29px;
   color: #ddd;
   margin: 0 0 15px 0;
   text-align: center;
 }
 .car p {
-  font-size: 14px;
+  font-size: 20px;
   color: #ddd;
   margin: 0 0 15px 0;
   text-align: center;
+  line-height: 30px !important;
 }
 .section2 {
   background-color: "#f6f9fe";
@@ -218,26 +220,28 @@ ul li {
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+  /* margin: 20px 0px; */
 }
 .mtn {
   color: #fff;
   background-color: #dc3545 !important;
   font-size: 19px !important;
   height: 6.2vh;
+  padding: 11px 15px !important;
 }
 .mtn1 {
   color: #fff;
   background-color: #106eea !important;
   font-size: 19px !important;
   height: 6.2vh;
-  padding-top: 17px;
+  padding: 11px 15px !important;
 }
 .mtn2 {
   background-color: #343a40 !important;
   height: 6.2vh;
   color: #fff;
   font-size: 19px !important;
-  padding-top: 17px;
+  padding: 11px 15px !important;
 }
 .background1 {
   padding: -10px 0px 0px 10px;
@@ -306,6 +310,7 @@ ul li {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   transition: 0.3s;
+  margin-bottom: 13px;
 }
 .btn-wrap {
   margin: 20px -20px -20px -20px;
@@ -383,9 +388,10 @@ label {
   top: 108px;
 }
 .icon li {
-  font-size: 38px;
+  font-size: 18px;
   display: inline-block;
-  padding: 0px 15px;
+  padding: 0px 10px;
+  /* float: inline-start; */
 }
 .icon li a {
   /* font-size: 18px; */
@@ -395,8 +401,10 @@ label {
   /* line-height: 1; */
   border-radius: 7px;
   text-align: center;
-  width: 60px;
-  height: 56px;
+  padding-top: 3px;
+  width: 50px;
+  height: 43px;
+  font-size: 23px;
   transition: 0.3s;
 }
 .who {
@@ -451,9 +459,7 @@ label {
   margin-left: 20vw;
   padding: 0px 10px;
 }
-.navbar {
-  height: 63px !important;
-}
+
 .middle {
   position: fixed;
   top: 50%;
@@ -483,13 +489,13 @@ label {
   padding: 13px 0px;
   background-attachment: fixed;
 }
-.okay {
+/* .okay {
   background-color: #106eea;
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
   color: #fff;
-}
+} */
 .okay span {
   font-size: 20px;
   font-family: "Poppins", sans-serif;
@@ -519,8 +525,6 @@ label {
   color: #fff;
   background: #06274b;
 }
-.social-links a {
-}
 @media screen and (max-min: 414px) {
   /* .section4 {
     background-image: url(./assest/images/millionairebb.jpg);
@@ -539,6 +543,17 @@ label {
   font-family: sans-serif, "poppins";
 }
 @media (max-width: 480px) {
+  ul li {
+    text-align: justify;
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    font-size: 17px;
+    text-size-adjust: 80%;
+    padding: 0px 12px;
+    /* max-width: 960px; */
+    transition-timing-function: ease;
+    transition-duration: 1s;
+  }
   .icon li {
     font-size: 32px;
     display: inline-block;
@@ -579,6 +594,7 @@ label {
     margin: 0 0 15px 0;
     text-align: center;
     padding: 0px 12px;
+    line-height: 12px;
   }
   .navbar-brand {
     color: #222222;
@@ -586,7 +602,10 @@ label {
     font-weight: 700;
     font-family: "Poppins", sans-serif;
     text-align: center;
-    margin-left: 0px !important;
+    margin-left: 9px !important;
+  }
+  .navbar {
+    height: 63px !important;
   }
   .sub {
     background-color: white;
@@ -612,12 +631,14 @@ label {
     font-size: 14px;
     transition: all 0.5s;
     color: #fff;
-    display: none;
+    display: none !important;
   }
+
   .right p {
     font-size: 17px;
     margin-left: 23px;
   }
+
   .started {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;

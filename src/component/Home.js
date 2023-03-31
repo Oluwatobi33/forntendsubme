@@ -11,7 +11,15 @@ import New from './New'
 import Footer from './Footer'
 // import Register from './Register'
 const Home = () => {
-
+    const scrollup = () => {
+        let myStyle = {
+            fontSize: '20px',
+        }
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
     return (
         <>
             <Nav />
@@ -23,7 +31,9 @@ const Home = () => {
             <Contact />
             <New />
             <Footer />
-            {/* <Register /> */}
+            <div className="">
+                <button onClick={scrollup} className="scr">^</button>
+            </div>
         </>
     )
 }

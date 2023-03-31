@@ -13,8 +13,8 @@ const Frequent = () => {
                     </div>
                 </div>
                 <div className="container">
-                    <div className="row">
-                        <div className="col-md-8">
+                    <div className="row justify-content-center">
+                        <div className="col-md-12">
                             <div class="accordion accordion-flush" id="accordionFlushExample">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
