@@ -9,12 +9,22 @@ import Happy from './Happy'
 import Contact from './Contact'
 import New from './New'
 import Footer from './Footer'
+import { useState, useEffect } from 'react'
 // import Register from './Register'
 const Home = () => {
-    const scrollup = () => {
-        let myStyle = {
-            fontSize: '20px',
-        }
+    const [backTop, setbackTop] = useState(false)
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 100) {
+                setbackTop(true)
+            } else {
+                setbackTop(false)
+            }
+        })
+    }, [])
+
+
+    const scrollUp = () => {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
@@ -22,6 +32,7 @@ const Home = () => {
     }
     return (
         <>
+            <div className='spinner2'></div>
             <Nav />
             <SubmeBann />
             <About />
@@ -31,9 +42,9 @@ const Home = () => {
             <Contact />
             <New />
             <Footer />
-            <div className="">
-                <button onClick={scrollup} className="scr">^</button>
-            </div>
+            {Home && (
+                <button className='border-0' style={{ position: "fixed", backgroundColor: "#18425D", color: "#FFFFFF", bottom: "100px", right: "50px", height: "50px", width: "50px", fontSize: "40px" }} onClick={scrollUp}>^</button>
+            )}
         </>
     )
 }
