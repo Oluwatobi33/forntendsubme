@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react'
 // import Register from './Register'
 const Home = () => {
     const [backTop, setbackTop] = useState(false)
+    const [isloading, setisLoading] = useState(false)
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 100) {
@@ -22,8 +23,6 @@ const Home = () => {
             }
         })
     }, [])
-
-
     const scrollUp = () => {
         window.scrollTo({
             top: 0,
@@ -32,7 +31,6 @@ const Home = () => {
     }
     return (
         <>
-            <div className='spinner2'></div>
             <Nav />
             <SubmeBann />
             <About />
@@ -43,7 +41,7 @@ const Home = () => {
             <New />
             <Footer />
             {Home && (
-                <button className='border-0' style={{ position: "fixed", backgroundColor: "#18425D", color: "#FFFFFF", bottom: "100px", right: "50px", height: "50px", width: "50px", fontSize: "40px" }} onClick={scrollUp}>^</button>
+                <button className='border-0' style={{ position: "fixed", backgroundColor: "#106EEA", color: "#FFFFFF", bottom: "100px", right: "50px", height: "50px", width: "50px", fontSize: "50px" }} onClick={scrollUp}>^</button>
             )}
         </>
     )

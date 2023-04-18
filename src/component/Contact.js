@@ -60,7 +60,7 @@ const Contact = () => {
                             <input type="text" className="form-control mb-3" name="subject" id="subject" placeholder="Subject" />
                             <textarea className="form-control" name="area" rows="5" id="area" placeholder="Message"></textarea>
                             <div className="error44"></div>
-                            <button type="submit" className="btn btn-danger  mt-3" onclick="send()">Send Message</button>
+                            <button type="submit" className="btn btn-danger  mt-3">Send Message</button>
                         </div>
                     </div>
                 </div>

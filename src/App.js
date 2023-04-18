@@ -8,6 +8,7 @@ import Register from './component/Register';
 // import Login from './component/Login';
 import Signin from './component/Signin';
 import Dashboard from './component/Dashboard';
+import Sidebar from './component/Sidebar';
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/sidebar" element={<Sidebar />} />
         <Route path='*' element={<Error />} />
       </Routes>
       {/* <Home /> */}
