@@ -27,20 +27,22 @@ const Dashboard = () => {
                                         <li>Dashboard</li>
                                         <li>Activity</li>
                                     </ul>
-                                    <input type="text" placeholder="search" required
-                                        style={{ padding: '9px 34px', border: '1px solid gainsboro', backgroundColor: "#ced4da" }} className="mt-3 mb-4" />
-                                    <i class="fa fa-search fs-5" style={{ position: "relative", left: "-23px" }}></i>
+                                    <div className='in'>
+                                        <input type="text" placeholder="search" required
+                                            className=" mb-4 input" />
+                                        <i class="fa fa-search fs-5" ></i>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="col-lg-2 col-md-1 float-end">
+                            <div className="col-lg-2 col-md-2">
                                 <div className='float-end'>
-                                    <ul className='dash mt-4' style={{ listStyleType: "none", display: "inline-block" }}>
-                                        <li className='position-relative'><i className='fa fa-bell fs-5'><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                                    <ul className='dash mt-4 not'>
+                                        <li className='position-relative'><i className='fa fa-bell fs-5 no'><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
                                             23+
                                             <span class="visually-hidden">unread messages</span>
                                         </span></i></li>
                                         <li className="nav-item px-3 dropdown">
-                                            <a className="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><li> <i className='fa fa-user text-dark'></i></li></a>
+                                            <a className="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><li> <i className='fa fa-user text-dark fs-5'></i></li></a>
                                             <ul className="dropdown-menu">
                                                 <Link to="/register"> <li><a className="dropdown-item py-2 px-4" href="#">Update Profile</a></li></Link>
                                                 <Link to="/signin"><li><a className="dropdown-item py-2 px-4" href="#">Change Password</a></li></Link>
@@ -54,27 +56,27 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </section>
-                {/* <div className="container-fluid mt-3" style={{ width: "75vw" }}> */}
-                {/* <div className="row"> */}
-                {/* <div className="col-md-2">
+                <div className="container-fluid mt-3" style={{ width: "75vw" }}>
+                    <div className="row"> */
+                        <div className="col-md-2">
                             <span><a style={{ fontSize: "34px" }}>User Dashboard</a> </span>
                         </div>
-                        <div className="col-md-8" style={{ marginLeft: "-15px" }}> */}
-                {/* <ul style={{ listStyleType: "none" }}>
-                                <li className='user'>
+                        <div className="col-md-8" style={{ marginLeft: "-15px" }}>
+                            <ul style={{ listStyleType: "none" }}>
+                                <li className='user mt-2'>
                                     <span> User Status: Starter </span><a href='#' style={{ backgroundColor: "#28a745", color: "white", padding: "15px 15px", fontWeight: "00", borderRadius: "12px" }}>"Upgrade to Reseller"</a>
                                 </li>
                                 {/* <li className='copy'><a className="dropdown-item py-2 px-4" href="#">Airtime</a></li> */}
-                <li className='copy'>
-                    {/* <span className='mx-2'>Your Referral link:<a href='https://subme.com.ng/register?ref=f126dd'>https://subme.com.ng/register?ref=f126dd</a></span> */}
-                    {/* <a className=' bg-danger text-white' style={{ fontSize: "19px" }} onClick={() => navigator.clipboard.writeText('https://subme.com.ng/register?ref=f126dd')}>copy</a><span style={{ fontSize: "28px" }}>View Referrals  |</span> */}
-                    {/* <span className='view' style={{ textDecoration: "none", fontSize: "28px" }}>View Referrals  |<i className='fa fa-money-check'></i></span> */}
-                </li>
-                {/* </ul> */}
-                {/* </div>
-                    </div> */}
-                {/* </div> */}
-                <div className="container-fluid  mt-4" style={{ width: "75vw" }} >
+                                <li className='copy py-3'>
+                                    <span className='mx-2 '>Your Referral link:<a href='https://subme.com.ng/register?ref=f126dd'>https://subme.com.ng/register?ref=f126dd</a></span>
+                                    <a className=' bg-danger text-white' style={{ fontSize: "19px" }} onClick={() => navigator.clipboard.writeText('https://subme.com.ng/register?ref=f126dd')}>copy</a><span className='refer' style={{ fontSize: "28px" }}>View Referrals  |</span>
+                                    {/* <span className='view' style={{ textDecoration: "none", fontSize: "28px" }}>View Referrals  |<i className='fa fa-money-check'></i></span> */}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> */
+                <div className="container-fluid  mt-4" style={{ width: "75vw" }}>
                     <div className="row">
                         <div className="col-12 col-sm-6 col-md-3">
                             <div className="sm1">
@@ -277,7 +279,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

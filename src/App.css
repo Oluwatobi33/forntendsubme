@@ -581,7 +581,18 @@ label {
   font-size: 55px;
   color: white;
 }
-
+.input {
+  padding: 9px 34px;
+  border: 1px solid gainsboro;
+  background-color: #ced4da;
+}
+.fa-search {
+  position: relative;
+  left: -23px;
+}
+.refer {
+  float: left;
+}
 @import url("https://fonts.googleapis.com/css?family=poppins:200,300,400,500,600,700,800,900&display=swap");
 * {
   margin: 0;
@@ -590,6 +601,17 @@ label {
   font-family: sans-serif, "poppins";
 }
 @media (max-width: 500px) {
+  .input {
+    margin-top: 43px !important;
+    padding: 9px 13px !important;
+    border: 1px solid gainsboro;
+    background-color: #ced4da;
+    margin-left: 29px !important;
+  }
+  .not {
+    margin-top: -73px !important;
+    margin-right: -px !important;
+  }
   .sm1 {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2) !important;
     border-radius: 0.25rem;
@@ -631,25 +653,25 @@ label {
     float: right;
     margin-top: -89px !important;
     position: relative;
-    right: 39px !important;
+    right: 19px !important;
   }
   .tiny2 {
     float: right;
-    margin-top: -49px !important;
+    margin-top: -69px !important;
     position: relative;
     right: 39px !important;
     padding: 9px 0px !important;
   }
   .tiny3 {
     float: right;
-    margin-top: -49px !important;
+    margin-top: -72px !important;
     position: relative;
-    right: 39px !important;
+    right: 12px !important;
     padding: 9px 0px !important;
   }
   .tiny4 {
     float: right;
-    margin-top: -49px !important;
+    margin-top: -72px !important;
     position: relative;
     right: 39px !important;
     padding: 9px 0px !important;
@@ -726,7 +748,7 @@ label {
   .info-box-icon i {
     font-weight: 900;
     font-size: 19px !important;
-    margin-right: 82px !important;
+    margin-right: 95px !important;
   }
   .buy {
     color: white;
@@ -767,7 +789,7 @@ label {
   }
 
   .dash li {
-    display: none;
+    display: inline-block;
     padding: 0px 12px;
   }
   .middle {
