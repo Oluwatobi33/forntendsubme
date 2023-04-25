@@ -1,3 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.container2 {
+  /* display: flex; */
+  position: fixed;
+  width: 100px;
+  height: 150%;
+  /* background: #343a40; */
+  transition: 0.5s;
+  /* overflow: hidden; */
+}
+.main {
+  width: 100%;
+  padding: 20px;
+}
+.sidebar {
+  background: #343a40;
+  color: white;
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
+}
+.top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+.logo {
+  font-size: 30px;
+}
+.bars {
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.link {
+  display: flex;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+}
+.link:hover {
+  background: white;
+  color: #000;
+  transition: all 0.5s;
+}
+.active {
+  background: lightskyblue;
+  color: #000;
+}
+.icon,
+.link_text {
+  font-size: 25px;
+}
 .App {
   text-align: center;
 }
@@ -16,6 +73,10 @@
 }
 .all {
   display: flex;
+}
+.ade {
+  /* padding: 17px 0px; */
+  height: 10px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -603,14 +664,15 @@ label {
 @media (max-width: 500px) {
   .input {
     margin-top: 43px !important;
-    padding: 9px 13px !important;
+    padding: 9px 10px !important;
+    width: 50vw !important;
     border: 1px solid gainsboro;
     background-color: #ced4da;
     margin-left: 29px !important;
   }
   .not {
     margin-top: -73px !important;
-    margin-right: -px !important;
+    margin-right: -13px !important;
   }
   .sm1 {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2) !important;
@@ -621,7 +683,9 @@ label {
     padding: 15px 8px !important;
     position: relative;
     width: 80vw !important;
+    z-index: -1;
   }
+
   .sm {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
@@ -631,12 +695,15 @@ label {
     padding: 16px 10px !important;
     position: relative;
     width: 80vw !important;
+    z-index: -1 !important;
   }
+
   .sm .two {
     padding: 15px 20px !important;
     background-color: #dc3545 !important;
     border-radius: 4px !important;
   }
+
   .sm .three {
     font-size: 65px;
     padding: "28px 25px";
@@ -792,9 +859,10 @@ label {
     display: inline-block;
     padding: 0px 12px;
   }
+
   .middle {
     position: fixed;
-    top: 50%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 97%;
@@ -1007,7 +1075,7 @@ label {
 .navigation.active {
   width: 290px;
 }
-.container.active {
+/* .container.active {
   width: calc(100% - 300px);
   margin-left: 300px;
 }
@@ -1017,7 +1085,7 @@ label {
 }
 .navigation:hover ~ .container {
   margin-left: 300px;
-}
+} */
 .navigation ul {
   position: absolute;
   top: 0;
@@ -1222,7 +1290,7 @@ label {
 .buy {
   color: white;
   font-size: 24px;
-  margin-left: -102px;
+  margin-left: -90px;
 }
 .pull-end {
   font-size: 23px;

@@ -9,10 +9,16 @@ import Register from './component/Register';
 import Signin from './component/Signin';
 import Dashboard from './component/Dashboard';
 import Sidebar from './component/Sidebar';
+// import Analysis from './component/pages/Analysis';
+// import Comment from './component/pages/Comment';
+// import Product from './component/pages/Product';
+// import Cart from './component/pages/Cart';
+
 function App() {
   return (
     <>
       {/* <FormikForm /> */}
+      {/* <Sidebar></Sidebar> */}
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path="/nav" element={<Nav />} />
@@ -21,6 +27,10 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/sidebar" element={<Sidebar />} />
+        {/* <Route path='/comment' element={<Comment />}></Route>
+        <Route path='/analysis' element={<Analysis />}></Route>
+        <Route path='/product' element={<Product />}></Route>
+        <Route path='/cart' element={<Cart />}></Route> */}
         <Route path='*' element={<Error />} />
       </Routes>
       {/* <Home /> */}

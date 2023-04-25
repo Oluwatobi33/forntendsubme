@@ -4,19 +4,18 @@ import 'font-awesome/css/font-awesome.min.css';
 import Sidebar from './Sidebar';
 import { Link } from 'react-router-dom';
 const Dashboard = () => {
-    const toggleMenu = () => {
-        let navigation = document.querySelector(".navigation");
-        let container = document.querySelector(".container");
-        let toggle = document.querySelector(".toggle");
-        container.classList.toggle("active");
+    // const toggleMenu = () => {
+    //     let navigation = document.querySelector(".navigation");
+    //     let container = document.querySelector(".container");
+    //     let toggle = document.querySelector(".toggle");
+    //     container.classList.toggle("active");
 
-        navigation.classList.toggle("active");
-        toggle.classList.toggle("active");
-    };
+    //     navigation.classList.toggle("active");
+    //     toggle.classList.toggle("active");
+    // };
     return (
         <>
             <Sidebar />
-            <div className="toggle mb-4" onClick={toggleMenu}></div>
             <div className="lay">
                 <section className=" bg-white shadow shadow-md">
                     <div className="container">
@@ -42,7 +41,7 @@ const Dashboard = () => {
                                             <span class="visually-hidden">unread messages</span>
                                         </span></i></li>
                                         <li className="nav-item px-3 dropdown">
-                                            <a className="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><li> <i className='fa fa-user text-dark fs-5'></i></li></a>
+                                            <a className="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><li> <i className='fa fa-user text-dark not fs-5'></i></li></a>
                                             <ul className="dropdown-menu">
                                                 <Link to="/register"> <li><a className="dropdown-item py-2 px-4" href="#">Update Profile</a></li></Link>
                                                 <Link to="/signin"><li><a className="dropdown-item py-2 px-4" href="#">Change Password</a></li></Link>
@@ -57,7 +56,7 @@ const Dashboard = () => {
                     </div>
                 </section>
                 <div className="container-fluid mt-3" style={{ width: "75vw" }}>
-                    <div className="row"> */
+                    <div className="row">
                         <div className="col-md-2">
                             <span><a style={{ fontSize: "34px" }}>User Dashboard</a> </span>
                         </div>
@@ -69,13 +68,13 @@ const Dashboard = () => {
                                 {/* <li className='copy'><a className="dropdown-item py-2 px-4" href="#">Airtime</a></li> */}
                                 <li className='copy py-3'>
                                     <span className='mx-2 '>Your Referral link:<a href='https://subme.com.ng/register?ref=f126dd'>https://subme.com.ng/register?ref=f126dd</a></span>
-                                    <a className=' bg-danger text-white' style={{ fontSize: "19px" }} onClick={() => navigator.clipboard.writeText('https://subme.com.ng/register?ref=f126dd')}>copy</a><span className='refer' style={{ fontSize: "28px" }}>View Referrals  |</span>
+                                    <a className=' bg-danger text-white' style={{ fontSize: "19px" }} onClick={() => navigator.clipboard.writeText('https://subme.com.ng/register?ref=f126dd')}>copy</a><span className='refer' style={{ fontSize: "28px" }}>View Referrals |</span>
                                     {/* <span className='view' style={{ textDecoration: "none", fontSize: "28px" }}>View Referrals  |<i className='fa fa-money-check'></i></span> */}
                                 </li>
                             </ul>
                         </div>
                     </div>
-                </div> */
+                </div>
                 <div className="container-fluid  mt-4" style={{ width: "75vw" }}>
                     <div className="row">
                         <div className="col-12 col-sm-6 col-md-3">
