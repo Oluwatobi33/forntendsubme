@@ -61,10 +61,11 @@ const Nav = () => {
                             </li>
                             <li className='nav-item px-3'><a className="nav-link text-dark" href="#">Contact</a></li>
                             <li className="nav-item px-3 dropdown">
-                                <a className="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Register/Login</a>
+                                <a className="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Register/Login/Dashboard</a>
                                 <ul className="dropdown-menu">
                                     <Link to="/register"> <li><a className="dropdown-item py-2 px-4" href="#">Register</a></li></Link>
                                     <Link to="/signin"><li><a className="dropdown-item py-2 px-4" href="#">Login</a></li></Link>
+                                    <Link to="/dashboard"><li><a className="dropdown-item py-2 px-4" href="#">Dashboard</a></li></Link>
                                 </ul>
                             </li>
                         </ul>

@@ -7,9 +7,9 @@ import SubmeBann from './component/SubmeBann';
 import Register from './component/Register';
 // import Login from './component/Login';
 import Signin from './component/Signin';
-import Dashboard from './component/Dashboard';
+import DashboardPast from './component/DashboardPast';
 import Sidebar from './component/Sidebar';
-import Dashboardnew from './component/Dashboardnew';
+import Dashboard from './component/Dashboard';
 // import Analysis from './component/pages/Analysis';
 // import Comment from './component/pages/Comment';
 // import Product from './component/pages/Product';
@@ -32,7 +32,7 @@ function App() {
         <Route path='/analysis' element={<Analysis />}></Route>
         <Route path='/product' element={<Product />}></Route>
         <Route path='/cart' element={<Cart />}></Route> */}
-        <Route path='/Dashboardnew' element={<Dashboardnew />}></Route>
+        <Route path='/Dashboard' element={<Dashboard />}></Route>
         <Route path='*' element={<Error />} />
       </Routes>
       {/* <Home /> */}
