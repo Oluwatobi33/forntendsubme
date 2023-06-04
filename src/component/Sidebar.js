@@ -13,7 +13,7 @@ const Sidebar = () => {
             <div className='container2'>
                 <div className="sidebar" style={{ width: isOpen ? "280px" : "50px" }}>
                     <div className="top_section">
-                        <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">Logo</h1>
+                        <h1 style={{ display: isOpen ? "block" : "none" }} className="logo"> <img src='https://subme.com.ng/img/subme_logo.jpeg' className='img-responsive img-fluid rounded rounded-circle' />subme</h1>
                         <div className="bars" style={{ marginLeft: isOpen ? "50px" : "0px" }}>
                             <FaBars onClick={toggleMenu} />
                         </div>

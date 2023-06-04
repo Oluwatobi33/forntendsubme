@@ -102,7 +102,7 @@ const Register = () => {
                                                     {Formik.errors.password}
                                                 </div>
                                             )}
-                                            <button type="submit" disabled={isloading} className="btn btn-primary  btn-lg mx-3 mt-3">{isloading ? " Processing... " : "Register"}</button><a className='btn btn-link fs-4 text-decoration-none'>
+                                            <button type="submit" disabled={isloading} className="btn btn-primary  btn-lg mx-3 mt-3">{isloading ? `processing, btn btn-primary` : "Register"}</button><a className='btn btn-link fs-4 text-decoration-none'>
                                                 {/* <button type="submit" className="btn  btn-lg btn-primary mt-4 fst-italic" disabled={isloading} style={{ background: " #00425f;" }}>{isloading ? " Processing... " : "Signup"}</button> */}
                                                 <Link to='/signin'> Already Registered?</Link>
                                             </a>
